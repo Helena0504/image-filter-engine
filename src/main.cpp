@@ -16,7 +16,7 @@ int main()
 
     int choice;
     int width, height, channels;
-    unsigned char *img = stbi_load("C:/Users/Swaroop/dev/projects/image filter engine/samples/input/test.png", &width, &height, &channels, 0);
+    unsigned char *img = stbi_load("../samples/input/test.png", &width, &height, &channels, 0);
 
     if (img == NULL)
     {
@@ -76,7 +76,7 @@ int main()
         cout << "Parallel Time: " << diffP.count() << " s" << endl;
         cout << "Speedup:       " << diffS.count() / diffP.count() << "x" << endl;
 
-        stbi_write_png("C:/Users/Swaroop/dev/projects/image filter engine/samples/output/grayscale.png", width, height, channels, result, width * channels);
+        stbi_write_png("../samples/output/grayscale.png", width, height, channels, result, width * channels);
 
         stbi_image_free(img);
         free(result);
@@ -109,7 +109,7 @@ int main()
         cout << "Parallel Time: " << diffP.count() << "s" << endl;
         cout << "Speedup:       " << diffS.count() / diffP.count() << "x" << endl;
 
-        stbi_write_png("C:/Users/Swaroop/dev/projects/image filter engine/samples/output/gaussian_blur.png", width, height, channels, result, width * channels);
+        stbi_write_png("../samples/output/gaussian_blur.png", width, height, channels, result, width * channels);
 
         stbi_image_free(img);
         free(result);
@@ -141,7 +141,7 @@ int main()
         cout << "Parallel Time: " << diffP.count() << "s" << endl;
         cout << "Speedup:       " << diffS.count() / diffP.count() << "x" << endl;
 
-        stbi_write_png("C:/Users/Swaroop/dev/projects/image filter engine/samples/output/sharpen.png", width, height, channels, result, width * channels);
+        stbi_write_png("../samples/output/sharpen.png", width, height, channels, result, width * channels);
 
         stbi_image_free(img);
         free(result);
@@ -266,7 +266,7 @@ int main()
         cout << "----------------------------------------------------\n"
              << endl;
 
-        stbi_write_png("C:/Users/Swaroop/dev/projects/image filter engine/samples/output/Sobel.png", width, height, channels, result, width * channels);
+        stbi_write_png("../samples/output/Sobel.png", width, height, channels, result, width * channels);
 
         stbi_image_free(img);
         free(result);
@@ -311,7 +311,7 @@ int main()
         cout << "Parallel Time: " << diffP.count() << "s" << endl;
         cout << "Speedup:       " << diffS.count() / diffP.count() << "x" << endl;
 
-        stbi_write_png("C:/Users/Swaroop/dev/projects/image filter engine/samples/output/Emboss.png", width, height, channels, result, width * channels);
+        stbi_write_png("../samples/output/Emboss.png", width, height, channels, result, width * channels);
 
         stbi_image_free(img);
         free(result);
